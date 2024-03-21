@@ -1,0 +1,12 @@
+Flask==3.0.2
+gdcm==1.1
+matplotlib==3.8.0
+numpy==1.26.4
+opencv_python==4.8.1.78
+Pillow==10.0.1
+Pillow==10.2.0
+pydicom==2.4.4
+python_gdcm==3.0.23
+scikit_learn==1.3.1
+torch==2.1.0+cu121
+tqdm==4.66.1

@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Загрузите серию КТ-снимков формата DICOM</h2>
+
+<div>
+  <form id="upload-file" method="post" enctype="multipart/form-data">
+    <input
+      type="file"
+      name="file[]"
+      id="imageUpload"
+      multiple=""
+    />
+  </form>
+
+  <div class="image-section">
+    <div>
+      <button type="button" class="btn btn-primary btn-lg" id="btn-predict">
+        Анализ
+      </button>
+    </div>
+  </div>
+
+  <div class="loader" style="display: none"></div>
+  <img id="img_sagital" src="" style="display: none">
+  <img id="img_axial" src="" style="display: none">
+  <div>
+    <img id="img_sag_map" src="" style="display: none">
+  </div>
+  <h3 id="result">
+    <span> </span>
+  </h3>
+</div>
+
+{% endblock %}
