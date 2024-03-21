@@ -95,3 +95,4 @@ def get_predict_for_serie_path(path: str, filename):
     dcm_serie = load_data.get_dcm_serie(path)
     dcm_serie = apply_voi_lut_array(dcm_serie)
     return get_predict_for_lut_serie(dcm_serie, filename)
+

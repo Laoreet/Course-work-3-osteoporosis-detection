@@ -55,7 +55,7 @@ def get_proections(ds_list, filename):
     img3d=np.zeros(img_shape)
     #print(ds_list[0].pixel_array.shape)
 
-    # Заполняем трехмерный массив нашими снимками (срезами), увеличивая при этом их контрастность
+    # Заполняем трехмерный массив нашими снимками (срезами)
     for i, s in enumerate(ds_list):
         img2d = s.pixel_array
         img3d[:,:,i] = img2d

@@ -37,7 +37,7 @@ def upload_data():
             # Получаем прогноз от модели
             pred  = predict.get_predict_for_serie_path(UPLOAD_FOLDER_DCM_SERIE, files[0].filename)
         except Exception as err:
-            pred = 'Ошибка! Загрузите корректную серию КТ снимков формата DICOM' + str(err), ''
+            pred = 'Ошибка! Загрузите корректную серию КТ снимков формата DICOM', ''
             img_paths = ['','']
         load_data.clear_dcm_data(UPLOAD_FOLDER_DCM_SERIE)
         return [pred, img_paths]

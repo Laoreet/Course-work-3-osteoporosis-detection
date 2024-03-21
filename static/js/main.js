@@ -1,12 +1,9 @@
 $(document).ready(function () {
-    // Init
     $('.image-section').hide()
     $('.loader').hide()
     $('#result').hide()
-
-    const img = document.getElementById('test_img');
   
-    // Upload Preview
+    // Загружаем стандартные значения элементов на страничке
     function readURL(input) {
       }
       $('#imageUpload').change(function () {
@@ -20,15 +17,15 @@ $(document).ready(function () {
         readURL(this)
       })
   
-    // Predict
+
     $('#btn-predict').click(function () {
       var form_data = new FormData($('#upload-file')[0])
   
-      // Show loading animation
+      // Выводим анимацию обработки/загрузки данных
       $(this).hide()
       $('.loader').show()
   
-      // Make prediction by calling api /predict
+      // Делаем обработку загруженных данных через переход на /predict
       $.ajax({
         type: 'POST',
         url: '/predict',
@@ -37,10 +34,10 @@ $(document).ready(function () {
         cache: false,
         processData: false,
         async: true,
-        
+
         success: function (data) {
             console.log(data[1])
-          // Get and display the result
+          // Обновляем данные на страничке в соответствии с результатами обработки
           $('.loader').hide()
           $('#result').fadeIn(600)
           $('#result').text(data[0][0])
